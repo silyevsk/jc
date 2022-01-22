@@ -1,0 +1,24 @@
+{
+  "name": "json-comparator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . test-jsons/a.json test-jsons/b.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silyevsk/json-comparator.git"
+  },
+  "keywords": [],
+  "author": "Sergey Ilyevsky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silyevsk/json-comparator/issues"
+  },
+  "homepage": "https://github.com/silyevsk/json-comparator#readme",
+  "devDependencies": {
+    "electron": "^16.0.7",
+    "jest": "^27.4.7"
+  }
+}

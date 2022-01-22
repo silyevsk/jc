@@ -1,1 +1,1 @@
-# json-comparator
+# jc - JSON Comparator
