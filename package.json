@@ -4,7 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron . test-jsons/a.json test-jsons/b.json"
+    "start": "watchman watch . && watchman -- trigger . jc-esbuild frontend/**/*.js frontend/**/*.jsx -- bash -c 'npm run bundle-frontend' && electron . test-jsons/a.json test-jsons/b.json",
+    "test": "jest",
+    "bundle-frontend": "esbuild frontend/app.jsx --bundle --target=chrome58 --outfile=build/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,11 @@
   "homepage": "https://github.com/silyevsk/json-comparator#readme",
   "devDependencies": {
     "electron": "^16.0.7",
+    "esbuild": "^0.14.13",
     "jest": "^27.4.7"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
